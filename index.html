@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra clone</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+crossorigin="anonymous">
+<style>
+  *
+{
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+#main
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 2px;
+    padding: 45px 20px;
+}
+
+#myntralogo
+{
+    width: 65px;
+    height: 45px;
+}
+
+
+#mela
+{
+    width: 40%;
+    margin-top: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+#second
+{
+    display: flex;
+    width: 30%;
+    gap: 35px;
+    padding-left: 250px;
+}
+
+#search
+{
+    border: 1px solid black;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    z-index: 10;
+}
+#image
+{
+    height: 50px;
+
+}
+#flatsale{
+    padding-left: 10%;
+    z-index: 1;
+}
+.carousel-item
+{
+
+    width: 100% !important;
+}
+.card-img-top
+{
+    padding: 30px 20px;
+    /* height: 2% !important; */
+}
+.card-body
+{
+    height: 50px;
+}
+input
+{
+    border: 0px;
+    width: 500px;
+    display: flex;
+    padding: 2px;
+}
+#cards
+{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+    gap: 2%;
+}
+.card
+{
+    margin-left:40px;
+    margin-top: 20px;
+}
+.card-text
+{
+    color: black;
+    font-weight: bold;
+}
+.card:hover{
+    box-shadow: 10px 10px 10px 10px;
+}
+#sections
+{
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+#sections:hover{
+    cursor: pointer;
+}
+.dropdown
+{
+    transition: ease-in;
+    transition-duration: 5s;
+    top: 200%;
+    display: none;
+    position: absolute;
+    margin-top: 150px;
+    padding: 10px;
+    width: 250px;
+    z-index: 1000;
+}
+@media screen and (max-width: 1600px) {
+    .main {
+        flex-direction: column;
+        width: 100%;
+    }
+    #search
+    {
+        display: none;
+    }
+    #mela:hover
+    {
+        border-bottom: 2px solid violet;
+    }
+    .dropdown{
+        display: none;
+    }
+    #flatsale {
+        width: 250px !important; /* Make the flatsale div take full width */
+        height: fit-content;
+        width: fit-content;
+    }
+    #flatsale img{
+        width: 850px;
+    };
+}
+
+#sections:hover .dropdown
+{
+    transition: ease-in;
+    transition-duration: 3s;
+    display: block;
+    background-color: rgb(227, 225, 225);
+    border: 2px solid violet;
+    top: 2%;
+}   
+.dropdown li:hover
+{
+    background-color: rgb(136, 127, 127);
+}
+#sectioned:hover
+{
+cursor: pointer;
+border-bottom: solid violet;
+}
+#flatsales
+{
+    padding-left: 30%;
+}
+#flatsales:hover{
+    transition: ease-in 1s;
+    box-shadow: 10px 10px 20px 20px;
+}
+#footer
+{
+    list-style: none;
+    display: flex;
+    background-color: antiquewhite;
+    justify-content: center;
+}
+</style>
+</head>
+<body>
+
+        <div id="main" class="main">
+        <div id="mela">
+            <img src="https://images.indianexpress.com/2021/01/myntra.png" id="image">
+            <div id ="sections">MEN
+                <div class="dropdown">
+                    <li id="droplist">TSHIRTS</li>
+                    <li class="droplist">CASUALS</li>
+                    <li class="droplist">FORMALS</li>
+                    <li class="droplist">HOODIE</li>
+                    <li class="droplist">SWEATERS</li> 
+                    <li class="droplist">JACKETS</li> 
+                    <li class="droplist">SUITS</li> 
+                    <li class="droplist">JEANS</li> 
+                </div>
+            </div>
+            <div id="sections">WOMEN
+                <div class="dropdown">
+                    <li id="droplist">KURTIS</li>
+                    <li class="droplist">SAREES</li>
+                    <li class="droplist">LEHANGAS</li>
+                    <li class="droplist">GOWN</li>
+                    <li class="droplist">FANCY WEAR</li> 
+                    <li class="droplist">PARTY WEAR</li> 
+                    <li class="droplist">CASUAL WEAR</li> 
+                    <li class="droplist">FORMAL WEAR</li> 
+                </div>
+            </div>
+            <div id ="sections">KIDS
+                <div class="dropdown">
+                    <li id="droplist">SHORTS</li>
+                    <li class="droplist">TSHIRTS</li>
+                    <li class="droplist">PANTS</li>
+                    <li class="droplist">HOME WEAR</li>
+                    <li class="droplist">PYJAMAS</li> 
+                    <li class="droplist">COAT SUIT</li> 
+                    <li class="droplist">RTY SAREE</li> 
+                    <li class="droplist">BUTTERFLY FOCK</li> 
+                </div>
+            </div>
+            <div id ="sections">BEAUTY
+                <div class="dropdown">
+                    <li id="droplist">LIP STICK</li>
+                    <li class="droplist">LIP GLOSS</li>
+                    <li class="droplist">EYE LINER</li>
+                    <li class="droplist">MASCARA</li>
+                    <li class="droplist">KAJAL</li> 
+                    <li class="droplist">FOUNDATION</li> 
+                    <li class="droplist">ROSE POWDER</li> 
+                    <li class="droplist">SETTER</li> 
+                </div>
+            </div>
+            <div id ="sections">LIVING
+                <div class="dropdown">
+                    <li id="droplist">MATRRESS</li>
+                    <li class="droplist">PILLOWS</li>
+                    <li class="droplist">BED SHEETS</li>
+                    <li class="droplist">BED SPREADS</li>
+                    <li class="droplist">MATS</li> 
+                    <li class="droplist">APRONS</li> 
+                    <li class="droplist">KITCHEN ITEMS</li> 
+                    <li class="droplist">CLEANERS</li> 
+                </div>
+            </div>
+        </div>
+        <div id="search">
+
+          <center><i class="fa-solid fa-magnifying-glass"></i></center>
+          <input type="text" placeholder="Search your brands here">
+        </div>
+        <div id="second">
+          <div id="sectioned">
+            <center><i class="fa-solid fa-user"></i></center>
+          <center><p>PROFILE</p></center>
+        </div>
+        <div id="sectioned">
+          <center><i class="fa-solid fa-heart"></i></center>
+          <center><p>WISHLIST</p></center>
+        </div>
+        <DIV id="sectioned">
+          <center><i class="fa-solid fa-cart-shopping"></i></center>
+          <center><p>CART</p></center>
+        </DIV>
+        </div>
+        </div>
+
+      <div id="flatsale">
+        <img src="https://www.gyftr.com/blog/wp-content/uploads/2019/04/banners21554285340.jpg">
+      </div>
+      <br>
+      <!--hiiiiiiiiiii-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/OHL/GW/BAU/May/Budget/PC_Hero_3000x1200_BS_PC._CB558386585_.jpg"
+class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img
+src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2024/GW/August/BAU/Unrec/PC/2._CB567657923_.jpg"
+class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img
+src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Sports/August/GW/Olympics/3000_x_1200_Unrec_PC._CB568042317_.png"
+class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button"
+data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--COMPLETED NAVI-->
+     
+      <div id="cards">
+      <div class="card" style="width: 18rem;">
+       <a href="https://www.myntra.com/watches?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0">
+<img src="https://m.media-amazon.com/images/I/61LO6l4zB4L._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">WATCH</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/watches?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"><img
+src="https://m.media-amazon.com/images/I/71IsYq4+37L._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">WATCH</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/watches?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"><img
+src="https://m.media-amazon.com/images/I/71pMiVlKaoL._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">WATCH</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/watches?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"><img
+src="https://m.media-amazon.com/images/I/61NECxS-bcL._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">WATCH</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/watches?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0">
+<img src="https://m.media-amazon.com/images/I/61LO6l4zB4L._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER><p class="card-text">WATCH</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+       <a href="https://www.myntra.com/women-jewellery?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"> <img src="https://m.media-amazon.com/images/I/71rw5o-HaDL._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER><p class="card-text">PENDANT</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/women-jewellery?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"><img src="https://m.media-amazon.com/images/I/51HTyfRbS9L._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">PENDANT</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/women-jewellery?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"> <img src="https://m.media-amazon.com/images/I/51YU60HM7DL._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">PENDANT</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/women-jewellery?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"> <img src="https://m.media-amazon.com/images/I/61Yf6Gbl-fL._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER><p class="card-text">PENDANT</p></CENTER>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <a href="https://www.myntra.com/women-jewellery?rf=Discount%20Range%3A10.0_100.0_10.0%20TO%20100.0"> <img src="https://m.media-amazon.com/images/I/61K9eb649SL._AC_UL320_.jpg"
+class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <CENTER> <p class="card-text">PENDANT</p></CENTER>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="flatsales">
+      <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202010/flipkart_660_191020092445.jpg">
+      <!-- <img src="https://www.baapoffers.com/uploads/myntra-blockbuster-sale-offers-14-15-16-july-coupons-upto-80-off-baapoffers-com.jpg"> -->
+    </div>
+    <br><br>
+    <div id="footer">
+      <div>
+        <h4>ONLINE SHOPPING</h4>
+        <li>MEN</li>
+        <LI>WOMEN</LI>
+        <LI>KIDS</LI>
+        <LI>LIVING</LI>
+        <LI>BEAUTY</LI>
+        <LI>GIFTS</LI>
+        </div>
+        <div>
+        <H4>USEFUL LINKS</H4>
+        <LI>BLOG</LI>
+        <LI>CAREERS</LI>
+        <LI>SITE MAP</LI>
+        <LI>CORPORATE INFO</LI>
+        <LI>WHITEHAT</LI>
+        <LI>CLEARTIP</LI>
+      </div>
+      <DIV>
+        <H4>CUSTOMER POLICIES</H4>
+        <LI>CONTACT US</LI>
+        <LI>FAQ</LI>
+        <LI>T&C</LI>
+        <LI>TERMS OF USE</LI>
+      </DIV>
+      <div>
+      <h4>POPULAR SEARCHES</h4>
+Makeup  Dresses For Girls  T-Shirts  Sandals  Headphones  Babydolls  Blazers For Men  Handbags  Ladies Watches  Bags  Sport Shoes  Reebok Shoes  Puma Shoes  Boxers  Wallets  Tops  Earrings  Fastrack Watches  Kurtis  Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes  Forever 21  Eye Makeup  Photo Frames  Punjabi Suits  Bikini  Myntra Fashion Show  Lipstick  Saree  Watches  Dresses  Lehenga  Nike Shoes  Goggles  Bras  Suit  Chinos  Shoes  Adidas Shoes  Woodland Shoes  Jewellery  Designers Sarees
+</div>
+</div>
+In case of any concern, Contact Us
+© 2024 www.myntra.com. All rights reserved.
+A Flipkart company
+Registered Office Address
+
+Buildings Alyssa,
+Begonia and Clover situated in Embassy Tech Village,
+Outer Ring Road,
+Devarabeesanahalli Village,
+Varthur Hobli,
+Bengaluru – 560103, India
+CIN: U72300KA2007PTC041799
+
+Telephone: +91-80-61561999
+    </P>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+</body>
+</html>
